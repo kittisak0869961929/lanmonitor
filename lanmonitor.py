@@ -251,6 +251,7 @@ def add_clients_to_db(clients_list):
 	conn.close()	# close sql connection to file"""
 
 
+
 def menu(client_list):
 	"""menu lists the current connections and prompts the user if they want to change any device names.
 
@@ -395,8 +396,6 @@ def monitor(id, client_list):
 		else:
 			pass
 			#print("no changes found")
-		#else:
-			# print("Check complete. No changes found.")
 
 
 	while(True):
@@ -478,35 +477,3 @@ if __name__ == '__main__':
 	main()
 
 
-
-# scratch paper:
-#
-# arp -a -v 
-# ping -n 1 192.168.2.5
-# getmac , net view /all , netstat -r
-"""
-parser = argparse.ArgumentParser()
-parser.add_argument('--foo', help='foo help')
-args = parser.parse_args()'''"""
-
-"""
-def load_mac():
-	# get the mac address of the user's computer
-	# If saved in config.ini, load from file and return string value.
-	# Else call fetch_mac() and save to config.ini before returning mac.
-
-	config = configparser.ConfigParser()
-	config.read('config.ini')
-
-	if ('user' in config):
-		mac = config['user']['mac']
-		print("Loading existing MAC address:", mac)
-	else:
-		print("Adding MAC to config.ini.")
-		config['user'] = {}
-		mac = fetch_mac()
-		config['user']['mac'] = mac
-		with open('config.ini', 'w') as configfile:
-			config.write(configfile)
-
-	return mac"""
