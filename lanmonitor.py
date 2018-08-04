@@ -443,7 +443,7 @@ def main():
 	argparser = argparse.ArgumentParser(description=program_description)
 	argparser.add_argument('-r', '--rename_on', action='store_true', help='ask user if they want to rename devices')
 	argparser.add_argument('-c', '--connections', action='store_true', help='print list of connected devices and exit')
-	argparser.add_argument('-m', '--monitor', action='store_true', help='provide id #\'s of devices to track')
+	argparser.add_argument('-m', '--monitor', action='store_true', help='provide id #\'s of devices to track, based on their stored ID#')
 	argparser.add_argument('devices', metavar='device ID#', type=int, nargs='*', help='id of devices to track')
 
 	args = argparser.parse_args()
@@ -454,7 +454,7 @@ def main():
 		ask_name_change = False
 
 	if args.monitor:
-		print("monitor arg chosen. ids: " + str(args.devices))
+		print("Monitoring devices #: " + str(args.devices))
 		watched_devices = args.devices
 
 	if args.connections:
