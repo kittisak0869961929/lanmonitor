@@ -1,4 +1,4 @@
-# lanmonitor
+# LAN Monitor
 Windows command-line LAN device listing with monitoring of connection changes and optional pop-up window to alert (dis)connection of specified devices.
 
 A list of LAN devices is provided, with the ability to save custom device names.  
